@@ -25,9 +25,21 @@ void fprintVec(vector<int> a,ofstream& fout) {
 	fout <<a[a.size()-1] <<endl;
 }
 
+void printMat(int* mat, int M, int N) {
+	// M col, N row
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < M; j++)
+			cout << mat[i*M + j] << " ";
+		cout << endl;
+	}
+}
 /*
 * define a cmp function to do quick sort by using qsort
 */
 int cmp(const void*a, const void*b) {
 	return *(int*)a - *(int*)b; // when a, b are integers
 }
+// for a int* array a[n]
+qsort(a,n,sizeof(int),cmp)
+// for a vector<int> res
+qsort(&res[0],res.size(),sizeof(int),cmp)
