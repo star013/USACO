@@ -26,7 +26,7 @@ void fprintVec(vector<int> a,ofstream& fout) {
 }
 
 void printMat(int* mat, int M, int N) {
-	// M col, N row
+	// M col, N row, i.e. N x M matrix
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++)
 			cout << mat[i*M + j] << " ";
