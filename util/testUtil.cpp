@@ -33,6 +33,14 @@ void printMat(int* mat, int M, int N) {
 		cout << endl;
 	}
 }
+
+int* dpcpyInt(int* a, int n) { // deep copy a int array
+	int* res = new int[n];
+	for (int i = 0; i < n; i++)
+		res[i] = a[i];
+	return res;
+}
+
 /*
 * define a cmp function to do quick sort by using qsort
 */
